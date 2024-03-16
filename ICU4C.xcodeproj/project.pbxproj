@@ -13,9 +13,13 @@
 		5847D0F72BA578ED0056943C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5847D0F52BA578ED0056943C /* Main.storyboard */; };
 		5847D0F92BA578EF0056943C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5847D0F82BA578EF0056943C /* Assets.xcassets */; };
 		5847D0FC2BA578EF0056943C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5847D0FA2BA578EF0056943C /* LaunchScreen.storyboard */; };
+		5847D1072BA57BE40056943C /* icu4cfuncs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5847D1052BA57BE40056943C /* icu4cfuncs.cpp */; };
+		5847D1092BA57C160056943C /* icu4cfuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847D1082BA57C160056943C /* icu4cfuncs.swift */; };
+		E186C2AEB42AA05FBBEDCE2F /* Pods_ICU4C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115F34B6E60F55894F702BA1 /* Pods_ICU4C.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		115F34B6E60F55894F702BA1 /* Pods_ICU4C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICU4C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5847D0EC2BA578ED0056943C /* ICU4C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICU4C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5847D0EF2BA578ED0056943C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5847D0F12BA578ED0056943C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,12 @@
 		5847D0F82BA578EF0056943C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5847D0FB2BA578EF0056943C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5847D0FD2BA578EF0056943C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5847D1042BA57BE30056943C /* ICU4C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ICU4C-Bridging-Header.h"; sourceTree = "<group>"; };
+		5847D1052BA57BE40056943C /* icu4cfuncs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = icu4cfuncs.cpp; sourceTree = "<group>"; };
+		5847D1062BA57BE40056943C /* icu4cfuncs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = icu4cfuncs.hpp; sourceTree = "<group>"; };
+		5847D1082BA57C160056943C /* icu4cfuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icu4cfuncs.swift; sourceTree = "<group>"; };
+		740AFB65D974E0E16AEB566F /* Pods-ICU4C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICU4C.release.xcconfig"; path = "Target Support Files/Pods-ICU4C/Pods-ICU4C.release.xcconfig"; sourceTree = "<group>"; };
+		D8C84B93AFABCFF9B90C5CD2 /* Pods-ICU4C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICU4C.debug.xcconfig"; path = "Target Support Files/Pods-ICU4C/Pods-ICU4C.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E186C2AEB42AA05FBBEDCE2F /* Pods_ICU4C.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				5847D0EE2BA578ED0056943C /* ICU4C */,
 				5847D0ED2BA578ED0056943C /* Products */,
+				65CF7D6842C7D261C4203999 /* Pods */,
+				89C4F8849D66428C6B98C5B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,44 @@
 		5847D0EE2BA578ED0056943C /* ICU4C */ = {
 			isa = PBXGroup;
 			children = (
+				5847D1032BA57B9E0056943C /* ICU */,
 				5847D0EF2BA578ED0056943C /* AppDelegate.swift */,
-				5847D0F12BA578ED0056943C /* SceneDelegate.swift */,
 				5847D0F32BA578ED0056943C /* ViewController.swift */,
+				5847D0F12BA578ED0056943C /* SceneDelegate.swift */,
 				5847D0F52BA578ED0056943C /* Main.storyboard */,
 				5847D0F82BA578EF0056943C /* Assets.xcassets */,
 				5847D0FA2BA578EF0056943C /* LaunchScreen.storyboard */,
 				5847D0FD2BA578EF0056943C /* Info.plist */,
 			);
 			path = ICU4C;
+			sourceTree = "<group>";
+		};
+		5847D1032BA57B9E0056943C /* ICU */ = {
+			isa = PBXGroup;
+			children = (
+				5847D1052BA57BE40056943C /* icu4cfuncs.cpp */,
+				5847D1062BA57BE40056943C /* icu4cfuncs.hpp */,
+				5847D1042BA57BE30056943C /* ICU4C-Bridging-Header.h */,
+				5847D1082BA57C160056943C /* icu4cfuncs.swift */,
+			);
+			path = ICU;
+			sourceTree = "<group>";
+		};
+		65CF7D6842C7D261C4203999 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8C84B93AFABCFF9B90C5CD2 /* Pods-ICU4C.debug.xcconfig */,
+				740AFB65D974E0E16AEB566F /* Pods-ICU4C.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		89C4F8849D66428C6B98C5B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				115F34B6E60F55894F702BA1 /* Pods_ICU4C.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5847D1002BA578EF0056943C /* Build configuration list for PBXNativeTarget "ICU4C" */;
 			buildPhases = (
+				197781755363DDFEFBFB02BE /* [CP] Check Pods Manifest.lock */,
+				E823E2602C728BA5278A37D5 /* [CP-User] Hummer-before-hooks */,
 				5847D0E82BA578ED0056943C /* Sources */,
 				5847D0E92BA578ED0056943C /* Frameworks */,
 				5847D0EA2BA578ED0056943C /* Resources */,
+				492E5638D4E07031C872F384 /* [CP-User] Hummer-after-hooks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +144,7 @@
 				TargetAttributes = {
 					5847D0EB2BA578ED0056943C = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -133,6 +179,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		197781755363DDFEFBFB02BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ICU4C-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		492E5638D4E07031C872F384 /* [CP-User] Hummer-after-hooks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Hummer-after-hooks";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f \"${PODS_ROOT}/hummer_after_hooks.sh\" ];then\n  bash \"${PODS_ROOT}/hummer_after_hooks.sh\"\nfi\n";
+		};
+		E823E2602C728BA5278A37D5 /* [CP-User] Hummer-before-hooks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Hummer-before-hooks";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f \"${PODS_ROOT}/hummer_before_hooks.sh\" ];then\n  bash \"${PODS_ROOT}/hummer_before_hooks.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5847D0E82BA578ED0056943C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +231,8 @@
 			files = (
 				5847D0F42BA578ED0056943C /* ViewController.swift in Sources */,
 				5847D0F02BA578ED0056943C /* AppDelegate.swift in Sources */,
+				5847D1092BA57C160056943C /* icu4cfuncs.swift in Sources */,
+				5847D1072BA57BE40056943C /* icu4cfuncs.cpp in Sources */,
 				5847D0F22BA578ED0056943C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,12 +380,15 @@
 		};
 		5847D1012BA578EF0056943C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8C84B93AFABCFF9B90C5CD2 /* Pods-ICU4C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5MC78M9RWB;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ICU4C/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -308,6 +404,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.LKMessageExternalAssemblyAuto.ICU4C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ICU4C/ICU/ICU4C-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,12 +413,15 @@
 		};
 		5847D1022BA578EF0056943C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 740AFB65D974E0E16AEB566F /* Pods-ICU4C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5MC78M9RWB;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ICU4C/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -336,6 +437,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.LKMessageExternalAssemblyAuto.ICU4C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ICU4C/ICU/ICU4C-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

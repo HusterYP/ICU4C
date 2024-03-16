@@ -1,0 +1,16 @@
+PODS:
+  - icu4c-iosx (74.2.8)
+
+DEPENDENCIES:
+  - icu4c-iosx (from `./icu4c-iosx`)
+
+EXTERNAL SOURCES:
+  icu4c-iosx:
+    :path: "./icu4c-iosx"
+
+SPEC CHECKSUMS:
+  icu4c-iosx: 78b0f3299bb898e0cf8f98f60bc82da5d5b3fc7b
+
+PODFILE CHECKSUM: ed5d2be1c41c3d246bdd29a635517003807cd131
+
+COCOAPODS: 1.11.2
